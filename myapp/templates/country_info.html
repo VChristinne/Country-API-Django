@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <form method="post" action="{% url 'country_info' %}">
-        {% csrf_token %}
-        <label for="country_name">Enter the country name: </label>
-        <input type="text" id="country_name" name="country_name" required>
-        <button type="submit">Submit</button>
-    </form>
+    <header>
+        <h1>Country API</h1>
+    </header>
+    <section>
+        <form method="post" action="{% url 'country_info' %}">
+            {% csrf_token %}
+            <label for="country_name">Enter the country name: </label>
+            <input type="text" id="country_name" name="country_name" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 </body>
 </html>
